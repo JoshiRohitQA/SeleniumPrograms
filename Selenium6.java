@@ -22,7 +22,14 @@ public class Selenium6 {
 		WebElement panNO = driver.findElement(By.id("pan"));
 		panNO.sendKeys("ABCDE1234A");
 		WebElement termsCheck = driver.findElement(By.id("terms"));
-		termsCheck.click();
+		if(termsCheck.isSelected()) {
+			System.out.println("Check box is selected");
+		}
+		else {
+			System.out.println("Check is not selected lets select it");
+			termsCheck.click();
+		}
+		
 		WebElement register = driver.findElement(By.name("Submit"));
 		register.click();
 		

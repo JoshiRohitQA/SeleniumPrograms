@@ -22,7 +22,9 @@ public class FlipKartShoeSelenium38 {
 		
 		Thread.sleep(2000);
 		
-		List<WebElement> shoeLis=driver.findElements(By.xpath("//form[@class='_2rslOn header-form-search OpXDaO']/ul/li"));
+		List<WebElement> shoeLis=driver.findElements(By.xpath("//ul[@class='_1sFryS _2x2Mmc _3ofZy1']/li/div"));
+		
+		
 		
 		System.out.println(shoeLis.size());
 		
@@ -31,7 +33,7 @@ public class FlipKartShoeSelenium38 {
 		
 		TakesScreenshot ts=driver;
 		File source=ts.getScreenshotAs(OutputType.FILE);
-		File destination = new File("C:\\Users\\rohit.joshi\\Desktop\\New folder\\Java Diagrams\\flipkartshoes1.png");
+		File destination = new File("C:\\Users\\rohit.joshi\\Desktop\\New folder\\Java Diagrams\\flipkartshoes8.png");
 		FileHandler.copy(source, destination);
 		
 		

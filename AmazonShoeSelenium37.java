@@ -2,6 +2,7 @@ package basic.programs;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -29,6 +30,7 @@ public class AmazonShoeSelenium37 {
 		shoe.get(4).click();
 		
 		System.out.println(driver.getTitle());
+		
 		
 		
 		TakesScreenshot ts =driver;

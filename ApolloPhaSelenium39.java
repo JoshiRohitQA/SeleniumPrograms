@@ -2,6 +2,7 @@ package basic.programs;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -32,9 +33,25 @@ public class ApolloPhaSelenium39 {
 		
 		
 		
+		Date d1 = new Date();
+		d1.getTime();
+		Date d2 = new Date(d1.getTime());
+		String time =d2.toString();
+		String date =time.substring(8,10);
+		String month = time.substring(4,7);
+		String year=time.substring(time.length()-4);
+		String exactTime = time.substring(11,19);
+		String correctTime=exactTime.replace(":", "_");
+		String dateFormat1= date.concat(month).concat(year).concat(correctTime);
+		
+		
+		
+		
+		
+		
 		TakesScreenshot ts=driver;
 		File source=ts.getScreenshotAs(OutputType.FILE);
-		File destination = new File("C:\\Users\\rohit.joshi\\Desktop\\New folder\\Java Diagrams\\Apolo.png");
+		File destination = new File("C:\\Users\\rohit.joshi\\Desktop\\New folder\\Java Diagrams\\Apolo"+dateFormat1+".png");
 		FileHandler.copy(source, destination);
 		
 		
